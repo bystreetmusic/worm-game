@@ -1,0 +1,106 @@
+@font-face {
+	font-family: 'Retro';
+	src: url('../../assets/font.ttf') format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:rgb(255, 255, 255);
+}
+.wrapper {
+	font-family: 'Retro', sans-serif;
+	width: 100vmin;
+	height: 100vmin;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 5px;
+	background: #293447;
+	box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+.game-details {
+  color: #B8C6DC;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+.play-board {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #212837;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+.play-board .food {
+  background:rgb(238, 135, 0);
+  border-radius: 25px;
+}
+.play-board .head {
+  background:rgb(30, 185, 16);
+}
+
+body {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+	gap: 2;
+}
+
+.direction-buttons {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+	margin-top: 10px
+}
+
+.arrow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #4bc4c4;
+    
+    clip-path: polygon(
+        50% 0, /* Top center */
+        0 50%, /* Left center */
+        50% 50%, /* Bottom center */
+        100% 50% /* Right center */
+    );
+}
+
+.arrow.up {
+    transform: rotate(0deg);
+    top: 0;
+}
+
+.arrow.down {
+    transform: rotate(180deg);
+    bottom: 0;
+}
+
+.arrow.left {
+    transform: rotate(-90deg);
+    left: 0;
+}
+
+.arrow.right {
+    transform: rotate(90deg);
+    right: 0;
+}
+
